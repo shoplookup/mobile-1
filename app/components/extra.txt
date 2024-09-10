@@ -1,0 +1,1 @@
+<SplineNext scene='https://prod.spline.design/Q4c6xL2G7QG8cMLx/scene.splinecode' className='max-sm:hidden'/>

@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar/Navbar";
+import Hero from "./components/hero/Hero";
+import SideModal from "./components/modals/SideModal";
 
-const inter = Inter({ subsets: ["latin"] });
+import About from "./components/about/About";
+import Assets from "./components/assets/Assets";
+import ChatBot from "./components/ChatBot";
+import Footer from "./components/footer/Footer";
+
+
+const font = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        {children}
+      
+        <Navbar />
+        <SideModal />
+        <Hero />
+        <About />
+        <Assets />
+        <Footer />
+        <ChatBot />
+      </body>
     </html>
   );
 }
